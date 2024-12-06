@@ -1,0 +1,18 @@
+name: pyafar
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - cmake
+  - dlib
+  - gradio
+  - pip:
+    - https://github.com/AffectAnalysisGroup/PyAFAR/releases/download/v3.0.0/PyAFAR_CPU-3.0-py3-none-any.whl
+    # 如果需要GPU版本，请取消下面一行的注释
+    # - https://github.com/AffectAnalysisGroup/PyAFAR/releases/download/v3.0.0/PyAFAR_GPU-3.0-py3-none-any.whl
+
+# 下面是注释，指导用户在环境创建后执行的步骤
+# 在创建环境后，你需要激活环境并运行以下命令来下载模型：
+# conda activate pyafar
+# python -c "import PyAFAR; PyAFAR.download_models()"
